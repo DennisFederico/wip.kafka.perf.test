@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: createtopics-configmap
+data:
+  BOOTSTRAP_SERVERS: dfederico-cp61-broker-0:9092
+  TOPIC_PREFIX: test
+  TOPIC_COUNT: "10"
+  TOPIC_PARTITIONS: "3"
+  REPLICATION_FACTOR: "1"
+  #TOPIC_CONFIG: "cleanup.policy=compact"

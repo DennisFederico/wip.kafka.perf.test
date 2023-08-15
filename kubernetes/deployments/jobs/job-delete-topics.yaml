@@ -1,0 +1,40 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job-delete-topics
+  namespace: confluent
+  labels:
+    app: job-delete-topics
+spec:
+  completions: 1
+  parallelism: 1
+  template:
+    spec:
+      containers:
+      - name: "kafka-perf-delete-topics"
+        image: "europe-west1-docker.pkg.dev/solutionsarchitect-01/dfederico/kafka-perf-base:latest"
+        command: ["delete_topics.sh"]
+        envFrom:
+        - configMapRef:
+            name: createtopics-configmap
+        volumeMounts:
+        - name: kafka-ca-cert-volume
+          mountPath: "/config/certs"
+        - name: kafka-connection-properties-volume
+          mountPath: "/config/properties"
+        resources:
+          requests:
+            cpu: 250m
+            memory: 384Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+      volumes:
+      - name: kafka-ca-cert-volume
+        secret:
+          secretName: kafka-ca-cert
+      - name: kafka-connection-properties-volume
+        secret:
+          secretName: kafka-connection-properties
+      restartPolicy: Never
+  backoffLimit: 3

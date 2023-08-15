@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "kafka-perf-tester"
+  namespace: "confluent"
+  labels:
+    app: "kafka-perf-tester"
+spec:
+  containers:
+  - name: "kafka-perf-create-topics"
+    image: "europe-west1-docker.pkg.dev/solutionsarchitect-01/dfederico/kafka-perf-base:latest"
+    command: ["tail", "-f", "/dev/null"]
+    envFrom:
+    - configMapRef:
+        name: createtopics-configmap
+    volumeMounts:
+    - name: kafka-ca-cert-volume
+      mountPath: "/config/certs"
+    - name: kafka-connection-properties-volume
+      mountPath: "/config/properties"
+    - name: producer-connection-properties-volume
+      mountPath: "/config/producer"
+    - name: consumer-connection-properties-volume
+      mountPath: "/config/consumer"
+    resources:
+      requests:
+        cpu: 250m
+        memory: 384Mi
+      limits:
+        cpu: 500m
+        memory: 512Mi
+  volumes:
+  - name: kafka-ca-cert-volume
+    secret:
+      secretName: kafka-ca-cert
+  - name: kafka-connection-properties-volume
+    secret:
+      secretName: kafka-connection-properties
+  - name: producer-connection-properties-volume
+    secret:
+      secretName: kafka-producer-properties
+  - name: consumer-connection-properties-volume
+    secret:
+      secretName: kafka-consumer-properties
+  restartPolicy: Never

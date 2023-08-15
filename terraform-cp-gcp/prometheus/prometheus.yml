@@ -1,0 +1,163 @@
+global:
+  # How frequently to scrape targets by default.
+  # Default 15s
+  scrape_interval: 30s
+  # How frequently to evaluate rules.
+  # Default 15s
+  evaluation_interval: 15s
+  # How long until a scrape request times out.
+  # Default to 10s.
+  # Required because cp-demo is using cpu throttling, so let's leave enough time to fetch the metrics in particular for the first time as it needs to compile all rexps
+  scrape_timeout: 30s
+
+# rule_files:
+#   - "alert.rules"
+
+# alerting:
+#   alertmanagers:
+#     - scheme: http
+#       static_configs:
+#         - targets:
+#             - "alertmanager:9093"
+
+scrape_configs:
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+
+  # - job_name: "node-exporter"
+  #   static_configs:
+  #     - targets: ["node-exporter:9100"]
+  #   relabel_configs:
+  #     - source_labels: [__address__]
+  #       target_label: hostname
+  #       regex: '([^:]+)(:[0-9]+)?'
+  #       replacement: '${1}'
+
+  - job_name: "zookeeper"
+    static_configs:
+      - targets:
+          - "dfederico-demo-zk-0:8079"
+        labels:
+          env: "demo"
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: hostname
+        regex: '([^:]+)(:[0-9]+)?'
+        replacement: '${1}'
+
+
+  - job_name: "kafka-broker"
+    static_configs:
+      - targets:
+          - "dfederico-demo-broker-0:8080"
+          - "dfederico-demo-broker-1:8080"
+          - "dfederico-demo-broker-2:8080"
+        labels:
+          env: "demo"
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: hostname
+        regex: '([^:]+)(:[0-9]+)?'
+        replacement: '${1}'
+
+  # - job_name: "schema-registry"
+  #   static_configs:
+  #     - targets:
+  #         - "dfederico-demo-sr-0:8078"
+  #       labels:
+  #         env: "demo"
+  #   relabel_configs:
+  #     - source_labels: [__address__]
+  #       target_label: hostname
+  #       regex: '([^:]+)(:[0-9]+)?'
+  #       replacement: '${1}'
+
+  - job_name: "kafka-connect"
+    static_configs:
+      - targets:
+          - "dfederico-demo-connect-0:8077"
+        labels:
+          env: "demo"
+          kafka_connect_cluster_id: "connect"
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: hostname
+        regex: '([^:]+)(:[0-9]+)?'
+        replacement: '${1}'
+
+  - job_name: "ksqldb"
+    static_configs:
+      - targets:
+          - "dfederico-demo-ksql-0:8076"
+        labels:
+          env: "demo"          
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: hostname
+        regex: '([^:]+)(:[0-9]+)?'
+        replacement: '${1}'
+
+
+  # - job_name: "streams-demo"
+  #   static_configs:
+  #     - targets:
+  #         - "streams-demo:1234"
+  #       labels:
+  #         env: "dev"
+  #   relabel_configs:
+  #     - source_labels: [__address__]
+  #       target_label: hostname
+  #       regex: '([^:]+)(:[0-9]+)?'
+  #       replacement: '${1}'
+
+  # - job_name: "rest-proxy"
+  #   static_configs:
+  #     - targets:
+  #         - "restproxy:1234"
+  #       labels:
+  #         env: "dev"
+  #   relabel_configs:
+  #     - source_labels: [__address__]
+  #       target_label: hostname
+  #       regex: '([^:]+)(:[0-9]+)?'
+        # replacement: '${1}'
+
+  # No producer for the moment in cp-demo
+  # - job_name: 'kafka-producer'
+  #   static_configs:
+  #     - targets:
+  #         - 'kafka1:1235'
+  #       labels:
+  #         env: 'dev'
+  #   relabel_configs:
+  #     - source_labels: [__address__]
+  #       target_label: hostname
+  #       regex: '([^:]+)(:[0-9]+)?'
+  #       replacement: '${1}'
+
+  # No consumer for the moment in cp-demo
+  # - job_name: 'kafka-consumer'
+  #   static_configs:
+  #     - targets:
+  #         - "kafka1:1236"
+  #       labels:
+  #         env: 'dev'
+  #   relabel_configs:
+  #     - source_labels: [__address__]
+  #       target_label: hostname
+  #       regex: '([^:]+)(:[0-9]+)?'
+  #       replacement: '${1}'
+
+  - job_name: "kafka-lag-exporter"
+    static_configs:
+      - targets:
+          - "dfederico-demo-lag-exporter:9999"
+        labels:
+          env: "demo"
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: instance
+        regex: '([^:]+)(:[0-9]+)?'
+        replacement: '${1}'

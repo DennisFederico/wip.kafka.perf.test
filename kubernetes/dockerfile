@@ -1,0 +1,26 @@
+FROM openjdk:17-jdk-slim
+
+ENV KAFKA_HOME=/opt/kafka
+ENV KAFKA_VERSION=3.3.2
+ENV SCALA_VERSION=2.13
+ENV WORKDIR=/etc/app
+
+RUN apt-get update &&\
+	apt-get install curl openssl -y &&\
+	apt install gettext-base procps -y
+
+RUN rm -rf /var/lib/apt/lists/*
+
+# Downloading/extracting Apache Kafka
+RUN curl -O https://archive.apache.org/dist/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz \
+    && mkdir $KAFKA_HOME \
+    && tar xvfz kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz -C $KAFKA_HOME --strip-components=1 \
+    && rm -f kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz*
+
+WORKDIR ${WORKDIR}
+ENV PATH $PATH:$KAFKA_HOME/bin:$WORKDIR
+
+COPY scripts/* ${WORKDIR}
+#USE A SECRET INSTEAD
+#COPY configs/connection.properties ${WORKDIR}/
+RUN chmod +x ${WORKDIR}/*.sh

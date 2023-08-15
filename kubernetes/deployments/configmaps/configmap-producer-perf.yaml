@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: producer-perf-configmap
+data:
+  TOPIC_NAME: test-1
+  NUM_RECORDS: "1000"
+  RECORD_SIZE: "500"
+  THROUGHPUT: "2"

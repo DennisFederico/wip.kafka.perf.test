@@ -1,0 +1,40 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job-producer-perf
+  namespace: confluent
+  labels:
+    app: job-producer-perf
+spec:
+  completions: 1
+  parallelism: 1
+  template:
+    spec:
+      containers:
+      - name: "job-producer-perf"
+        image: "europe-west1-docker.pkg.dev/solutionsarchitect-01/dfederico/kafka-perf-base:latest"
+        command: ["producer_perf.sh"]
+        envFrom:
+        - configMapRef:
+            name: producer-perf-configmap
+        volumeMounts:
+        - name: kafka-ca-cert-volume
+          mountPath: "/config/certs"
+        - name: kafka-connection-properties-volume
+          mountPath: "/config/producer"
+        resources:
+          requests:
+            cpu: 250m
+            memory: 384Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+      volumes:
+      - name: kafka-ca-cert-volume
+        secret:
+          secretName: kafka-ca-cert
+      - name: kafka-connection-properties-volume
+        secret:
+          secretName: kafka-producer-properties
+      restartPolicy: Never
+  backoffLimit: 3

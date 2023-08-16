@@ -1,28 +1,29 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: job-create-topics
+  name: job-create-topics-parallel
   namespace: confluent
   labels:
     app: job-create-topics
 spec:
-  completions: 1
-  parallelism: 1
+  completions: 10
+  parallelism: 5
+  completionMode: Indexed
   template:
     spec:
       containers:
       - name: "kafka-perf-create-topics"
         image: "europe-west1-docker.pkg.dev/solutionsarchitect-01/dfederico/kafka-perf-base:latest"
-        command: ["create_topics.sh"]
+        command: ["create_topics_parallel.sh"]
         env:
         - name: KAFKA_HEAP_OPTS
           value: "-Xmx128M"
         - name: BOOTSTRAP_SERVERS
-          value: dfederico-cp61-broker-0:9092
+          value: dfederico-cp73-broker-0:9092
         - name: TOPIC_PREFIX
-          value: topic-create-test
+          value: batch-created
         - name: TOPIC_COUNT
-          value: "10"
+          value: "100"
         - name: TOPIC_PARTITIONS
           value: "3"
         - name: REPLICATION_FACTOR

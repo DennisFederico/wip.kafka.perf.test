@@ -10,9 +10,11 @@ spec:
   - name: "kafka-perf-create-topics"
     image: "europe-west1-docker.pkg.dev/solutionsarchitect-01/dfederico/kafka-perf-base:latest"
     command: ["tail", "-f", "/dev/null"]
-    envFrom:
-    - configMapRef:
-        name: createtopics-configmap
+    env:
+      - name: BOOTSTRAP61
+        value: dfederico-cp61-broker-0:9092
+      - name: BOOTSTRAP73
+        value: dfederico-cp73-broker-0:9092
     volumeMounts:
     - name: kafka-ca-cert-volume
       mountPath: "/config/certs"

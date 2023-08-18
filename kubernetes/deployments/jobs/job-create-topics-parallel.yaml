@@ -6,8 +6,8 @@ metadata:
   labels:
     app: job-create-topics
 spec:
-  completions: 10
-  parallelism: 5
+  completions: 50
+  parallelism: 25
   completionMode: Indexed
   template:
     spec:
@@ -21,9 +21,9 @@ spec:
         - name: BOOTSTRAP_SERVERS
           value: dfederico-cp73-broker-0:9092
         - name: TOPIC_PREFIX
-          value: batch-created
+          value: batch-created6
         - name: TOPIC_COUNT
-          value: "100"
+          value: "50"
         - name: TOPIC_PARTITIONS
           value: "3"
         - name: REPLICATION_FACTOR

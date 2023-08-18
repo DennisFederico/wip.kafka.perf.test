@@ -1,0 +1,166 @@
+Computing even cluster load plan...
+Optimization has 24 inter-broker replica(7268.00 MB) moves and 41 leadership moves with a cluster model of 6 recent windows and 100.00% of the partitions covered.
+New brokers: [].
+Dead or removed brokers: [].
+Violated goals before optimization: [LeaderBytesInDistributionGoal, NetworkInboundUsageDistributionGoal, CpuUsageDistributionGoal, NetworkOutboundUsageDistributionGoal].
+Violated goals after optimization: [LeaderBytesInDistributionGoal, CpuUsageDistributionGoal, NetworkOutboundUsageDistributionGoal].
+Goals which generated movements: [LeaderBytesInDistributionGoal, NetworkInboundUsageDistributionGoal, CpuUsageDistributionGoal, NetworkOutboundUsageDistributionGoal].
+Excluded topics: [].
+Excluded brokers for leadership: [].
+Excluded brokers for replica move: [].
+Counts: 12 brokers 74148 replicas 8055 topics.
+On-demand balancedness score before and after: 89.62 -> 92.65.
+
+
+
+Stats for MovementExclusionGoal (NO-ACTION):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2125.10% networkInbound:	438.50KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	903.92KBps replicas:	74148 leaderReplicas:	2237 topicReplicas:	26}
+MIN: {cpu:	0.00% networkInbound:	342.17KBps networkOutbound:	0.00KBps disk:	50369.38MB potentialNwOut:	684.34KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	700.44% networkInbound:	27.03KBps networkOutbound:	189.84KBps disk:	2525.20MB potentialNwOut:	63.67KBps replicas:	74148 leaderReplicas:	160 topicReplicas:	0}
+0 proposals generated -- 0 rejected (0.00), 0 accepted (0.00) -- 0 moves, 0 swaps
+
+Stats for ReplicaPlacementGoal (NO-ACTION):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2125.10% networkInbound:	438.50KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	903.92KBps replicas:	74148 leaderReplicas:	2237 topicReplicas:	26}
+MIN: {cpu:	0.00% networkInbound:	342.17KBps networkOutbound:	0.00KBps disk:	50369.38MB potentialNwOut:	684.34KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	700.44% networkInbound:	27.03KBps networkOutbound:	189.84KBps disk:	2525.20MB potentialNwOut:	63.67KBps replicas:	74148 leaderReplicas:	160 topicReplicas:	0}
+0 proposals generated -- 0 rejected (0.00), 0 accepted (0.00) -- 0 moves, 0 swaps
+
+Stats for RackAwareGoal (NO-ACTION):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2125.10% networkInbound:	438.50KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	903.92KBps replicas:	74148 leaderReplicas:	2237 topicReplicas:	26}
+MIN: {cpu:	0.00% networkInbound:	342.17KBps networkOutbound:	0.00KBps disk:	50369.38MB potentialNwOut:	684.34KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	700.44% networkInbound:	27.03KBps networkOutbound:	189.84KBps disk:	2525.20MB potentialNwOut:	63.67KBps replicas:	74148 leaderReplicas:	160 topicReplicas:	0}
+0 proposals generated -- 0 rejected (0.00), 0 accepted (0.00) -- 0 moves, 0 swaps
+
+Stats for MaxReplicaMovementParallelismGoal (NO-ACTION):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2125.10% networkInbound:	438.50KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	903.92KBps replicas:	74148 leaderReplicas:	2237 topicReplicas:	26}
+MIN: {cpu:	0.00% networkInbound:	342.17KBps networkOutbound:	0.00KBps disk:	50369.38MB potentialNwOut:	684.34KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	700.44% networkInbound:	27.03KBps networkOutbound:	189.84KBps disk:	2525.20MB potentialNwOut:	63.67KBps replicas:	74148 leaderReplicas:	160 topicReplicas:	0}
+0 proposals generated -- 0 rejected (0.00), 0 accepted (0.00) -- 0 moves, 0 swaps
+
+Stats for ReplicaCapacityGoal (NO-ACTION):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2125.10% networkInbound:	438.50KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	903.92KBps replicas:	74148 leaderReplicas:	2237 topicReplicas:	26}
+MIN: {cpu:	0.00% networkInbound:	342.17KBps networkOutbound:	0.00KBps disk:	50369.38MB potentialNwOut:	684.34KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	700.44% networkInbound:	27.03KBps networkOutbound:	189.84KBps disk:	2525.20MB potentialNwOut:	63.67KBps replicas:	74148 leaderReplicas:	160 topicReplicas:	0}
+0 proposals generated -- 0 rejected (0.00), 0 accepted (0.00) -- 0 moves, 0 swaps
+
+Stats for DiskCapacityGoal (NO-ACTION):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2125.10% networkInbound:	438.50KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	903.92KBps replicas:	74148 leaderReplicas:	2237 topicReplicas:	26}
+MIN: {cpu:	0.00% networkInbound:	342.17KBps networkOutbound:	0.00KBps disk:	50369.38MB potentialNwOut:	684.34KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	700.44% networkInbound:	27.03KBps networkOutbound:	189.84KBps disk:	2525.20MB potentialNwOut:	63.67KBps replicas:	74148 leaderReplicas:	160 topicReplicas:	0}
+0 proposals generated -- 0 rejected (0.00), 0 accepted (0.00) -- 0 moves, 0 swaps
+
+Stats for NetworkInboundCapacityGoal (NO-ACTION):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2125.10% networkInbound:	438.50KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	903.92KBps replicas:	74148 leaderReplicas:	2237 topicReplicas:	26}
+MIN: {cpu:	0.00% networkInbound:	342.17KBps networkOutbound:	0.00KBps disk:	50369.38MB potentialNwOut:	684.34KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	700.44% networkInbound:	27.03KBps networkOutbound:	189.84KBps disk:	2525.20MB potentialNwOut:	63.67KBps replicas:	74148 leaderReplicas:	160 topicReplicas:	0}
+0 proposals generated -- 0 rejected (0.00), 0 accepted (0.00) -- 0 moves, 0 swaps
+
+Stats for NetworkOutboundCapacityGoal (NO-ACTION):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2125.10% networkInbound:	438.50KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	903.92KBps replicas:	74148 leaderReplicas:	2237 topicReplicas:	26}
+MIN: {cpu:	0.00% networkInbound:	342.17KBps networkOutbound:	0.00KBps disk:	50369.38MB potentialNwOut:	684.34KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	700.44% networkInbound:	27.03KBps networkOutbound:	189.84KBps disk:	2525.20MB potentialNwOut:	63.67KBps replicas:	74148 leaderReplicas:	160 topicReplicas:	0}
+0 proposals generated -- 0 rejected (0.00), 0 accepted (0.00) -- 0 moves, 0 swaps
+
+Stats for ReplicaDistributionGoal (NO-ACTION):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2125.10% networkInbound:	438.50KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	903.92KBps replicas:	74148 leaderReplicas:	2237 topicReplicas:	26}
+MIN: {cpu:	0.00% networkInbound:	342.17KBps networkOutbound:	0.00KBps disk:	50369.38MB potentialNwOut:	684.34KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	700.44% networkInbound:	27.03KBps networkOutbound:	189.84KBps disk:	2525.20MB potentialNwOut:	63.67KBps replicas:	74148 leaderReplicas:	160 topicReplicas:	0}
+0 proposals generated -- 0 rejected (0.00), 0 accepted (0.00) -- 0 moves, 0 swaps
+
+Stats for DiskUsageDistributionGoal (NO-ACTION):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2125.10% networkInbound:	438.50KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	903.92KBps replicas:	74148 leaderReplicas:	2237 topicReplicas:	26}
+MIN: {cpu:	0.00% networkInbound:	342.17KBps networkOutbound:	0.00KBps disk:	50369.38MB potentialNwOut:	684.34KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	700.44% networkInbound:	27.03KBps networkOutbound:	189.84KBps disk:	2525.20MB potentialNwOut:	63.67KBps replicas:	74148 leaderReplicas:	160 topicReplicas:	0}
+0 proposals generated -- 0 rejected (0.00), 0 accepted (0.00) -- 0 moves, 0 swaps
+
+Stats for LeaderReplicaDistributionGoal (NO-ACTION):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2125.10% networkInbound:	438.50KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	903.92KBps replicas:	74148 leaderReplicas:	2237 topicReplicas:	26}
+MIN: {cpu:	0.00% networkInbound:	342.17KBps networkOutbound:	0.00KBps disk:	50369.38MB potentialNwOut:	684.34KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	700.44% networkInbound:	27.03KBps networkOutbound:	189.84KBps disk:	2525.20MB potentialNwOut:	63.67KBps replicas:	74148 leaderReplicas:	160 topicReplicas:	0}
+0 proposals generated -- 0 rejected (0.00), 0 accepted (0.00) -- 0 moves, 0 swaps
+
+Stats for NetworkInboundUsageDistributionGoal (FIXED):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2125.10% networkInbound:	413.29KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	839.86KBps replicas:	74148 leaderReplicas:	2237 topicReplicas:	26}
+MIN: {cpu:	81.17% networkInbound:	349.08KBps networkOutbound:	0.00KBps disk:	50474.05MB potentialNwOut:	698.16KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	635.69% networkInbound:	20.77KBps networkOutbound:	194.74KBps disk:	2150.00MB potentialNwOut:	47.77KBps replicas:	74148 leaderReplicas:	160 topicReplicas:	0}
+5 proposals generated -- 0 rejected (0.00), 5 accepted (1.00) -- 5 moves, 0 swaps
+
+Stats for NetworkOutboundUsageDistributionGoal (VIOLATED):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2024.03% networkInbound:	413.29KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	839.86KBps replicas:	74148 leaderReplicas:	2246 topicReplicas:	26}
+MIN: {cpu:	81.17% networkInbound:	349.08KBps networkOutbound:	15.31KBps disk:	50142.02MB potentialNwOut:	698.16KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	621.80% networkInbound:	19.82KBps networkOutbound:	148.45KBps disk:	2204.65MB potentialNwOut:	43.06KBps replicas:	74148 leaderReplicas:	158 topicReplicas:	0}
+1236 proposals generated -- 1201 rejected (0.97), 35 accepted (0.03) -- 15 moves, 0 swaps
+Proposal rejections by rejecting goal:
+	NetworkInboundUsageDistributionGoal: 1181
+	DiskUsageDistributionGoal: 5
+	LeaderReplicaDistributionGoal: 15
+
+Stats for CpuUsageDistributionGoal (VIOLATED):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2005.20% networkInbound:	413.29KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	839.86KBps replicas:	74148 leaderReplicas:	2246 topicReplicas:	26}
+MIN: {cpu:	100.00% networkInbound:	349.08KBps networkOutbound:	15.31KBps disk:	50142.02MB potentialNwOut:	698.16KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	616.92% networkInbound:	18.78KBps networkOutbound:	148.45KBps disk:	2176.29MB potentialNwOut:	38.74KBps replicas:	74148 leaderReplicas:	158 topicReplicas:	0}
+5617 proposals generated -- 5603 rejected (1.00), 14 accepted (0.00) -- 12 moves, 0 swaps
+Proposal rejections by rejecting goal:
+	NetworkOutboundUsageDistributionGoal: 5603
+
+Stats for TopicReplicaDistributionGoal (NO-ACTION):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2005.20% networkInbound:	413.29KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	839.86KBps replicas:	74148 leaderReplicas:	2246 topicReplicas:	26}
+MIN: {cpu:	100.00% networkInbound:	349.08KBps networkOutbound:	15.31KBps disk:	50142.02MB potentialNwOut:	698.16KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	616.92% networkInbound:	18.78KBps networkOutbound:	148.45KBps disk:	2176.29MB potentialNwOut:	38.74KBps replicas:	74148 leaderReplicas:	158 topicReplicas:	0}
+0 proposals generated -- 0 rejected (0.00), 0 accepted (0.00) -- 0 moves, 0 swaps
+
+Stats for LeaderBytesInDistributionGoal (VIOLATED):
+AVG: {cpu:	1034.11% networkInbound:	380.68KBps networkOutbound:	258.62KBps disk:	53253.35MB potentialNwOut:	775.87KBps replicas:	74148 leaderReplicas:	2059 topicReplicas:	0}
+MAX: {cpu:	2005.20% networkInbound:	413.29KBps networkOutbound:	525.38KBps disk:	57743.60MB potentialNwOut:	839.86KBps replicas:	74148 leaderReplicas:	2246 topicReplicas:	26}
+MIN: {cpu:	100.00% networkInbound:	349.08KBps networkOutbound:	15.31KBps disk:	50142.02MB potentialNwOut:	698.16KBps replicas:	74148 leaderReplicas:	1874 topicReplicas:	0}
+STD: {cpu:	616.92% networkInbound:	18.78KBps networkOutbound:	148.45KBps disk:	2176.29MB potentialNwOut:	38.74KBps replicas:	74148 leaderReplicas:	153 topicReplicas:	0}
+13246 proposals generated -- 13214 rejected (1.00), 32 accepted (0.00) -- 0 moves, 0 swaps
+Proposal rejections by rejecting goal:
+	CpuUsageDistributionGoal: 12762
+	LeaderReplicaDistributionGoal: 452
+
+
+
+Cluster load now:
+BROKER: {id: 1	 host: dfederico-cp73-broker-0	 disk: 52596.85MB/2.61%	 cpu: 2125.10%	 leader network in: 167.94KB/s	 follower network in: 227.02KB/s	 network out: 346.35KB/s	 potential network out: 819.76KB/s	 leaders/replicas: 2199/6642}
+BROKER: {id: 2	 host: dfederico-cp73-broker-1	 disk: 57743.60MB/2.87%	 cpu: 1214.51%	 leader network in: 10.29KB/s	 follower network in: 392.59KB/s	 network out: 35.31KB/s	 potential network out: 839.86KB/s	 leaders/replicas: 2237/6643}
+BROKER: {id: 3	 host: dfederico-cp73-broker-2	 disk: 51112.89MB/2.54%	 cpu: 1490.60%	 leader network in: 217.21KB/s	 follower network in: 143.57KB/s	 network out: 442.63KB/s	 potential network out: 748.77KB/s	 leaders/replicas: 2226/6641}
+BROKER: {id: 4	 host: dfederico-cp73-broker-3	 disk: 51267.07MB/2.54%	 cpu: 1838.82%	 leader network in: 133.40KB/s	 follower network in: 254.30KB/s	 network out: 277.14KB/s	 potential network out: 807.94KB/s	 leaders/replicas: 2195/6642}
+BROKER: {id: 5	 host: dfederico-cp73-broker-4	 disk: 56929.27MB/2.83%	 cpu: 1506.23%	 leader network in: 9.33KB/s	 follower network in: 429.17KB/s	 network out: 26.25KB/s	 potential network out: 903.92KB/s	 leaders/replicas: 2212/6643}
+BROKER: {id: 6	 host: dfederico-cp73-broker-5	 disk: 56131.95MB/2.79%	 cpu: 1478.13%	 leader network in: 141.01KB/s	 follower network in: 253.23KB/s	 network out: 288.74KB/s	 potential network out: 812.07KB/s	 leaders/replicas: 2215/6643}
+BROKER: {id: 7	 host: dfederico-cp73-broker-6	 disk: 50474.05MB/2.51%	 cpu: 81.17%	 leader network in: 121.36KB/s	 follower network in: 241.98KB/s	 network out: 242.72KB/s	 potential network out: 726.67KB/s	 leaders/replicas: 1874/5628}
+BROKER: {id: 8	 host: dfederico-cp73-broker-7	 disk: 52072.28MB/2.58%	 cpu: 81.88%	 leader network in: 0.00KB/s	 follower network in: 351.10KB/s	 network out: 0.00KB/s	 potential network out: 702.20KB/s	 leaders/replicas: 1888/5628}
+BROKER: {id: 9	 host: dfederico-cp73-broker-8	 disk: 50369.38MB/2.50%	 cpu: 0.00%	 leader network in: 220.81KB/s	 follower network in: 121.36KB/s	 network out: 441.62KB/s	 potential network out: 684.34KB/s	 leaders/replicas: 1876/5628}
+BROKER: {id: 10	 host: dfederico-cp73-broker-9	 disk: 51144.82MB/2.54%	 cpu: 338.07%	 leader network in: 0.37KB/s	 follower network in: 401.18KB/s	 network out: 0.75KB/s	 potential network out: 803.12KB/s	 leaders/replicas: 1877/5630}
+BROKER: {id: 11	 host: dfederico-cp73-broker-10	 disk: 54387.79MB/2.70%	 cpu: 1091.69%	 leader network in: 238.30KB/s	 follower network in: 110.78KB/s	 network out: 476.60KB/s	 potential network out: 698.16KB/s	 leaders/replicas: 2043/6152}
+BROKER: {id: 12	 host: dfederico-cp73-broker-11	 disk: 54812.59MB/2.72%	 cpu: 1163.17%	 leader network in: 262.69KB/s	 follower network in: 119.15KB/s	 network out: 525.38KB/s	 potential network out: 763.68KB/s	 leaders/replicas: 1874/5628}
+
+Cluster load after rebalancing:
+BROKER: {id: 1	 host: dfederico-cp73-broker-0	 disk: 50918.20MB/2.53%	 cpu: 2005.20%	 leader network in: 159.43KB/s	 follower network in: 222.87KB/s	 network out: 318.87KB/s	 potential network out: 779.88KB/s	 leaders/replicas: 2160/6633}
+BROKER: {id: 2	 host: dfederico-cp73-broker-1	 disk: 57743.60MB/2.87%	 cpu: 1707.91%	 leader network in: 22.93KB/s	 follower network in: 379.95KB/s	 network out: 74.79KB/s	 potential network out: 839.86KB/s	 leaders/replicas: 2246/6643}
+BROKER: {id: 3	 host: dfederico-cp73-broker-2	 disk: 50552.18MB/2.51%	 cpu: 1436.10%	 leader network in: 208.80KB/s	 follower network in: 147.83KB/s	 network out: 417.60KB/s	 potential network out: 736.36KB/s	 leaders/replicas: 2219/6637}
+BROKER: {id: 4	 host: dfederico-cp73-broker-3	 disk: 50142.02MB/2.49%	 cpu: 1728.79%	 leader network in: 125.34KB/s	 follower network in: 253.94KB/s	 network out: 250.68KB/s	 potential network out: 781.82KB/s	 leaders/replicas: 2188/6631}
+BROKER: {id: 5	 host: dfederico-cp73-broker-4	 disk: 54132.30MB/2.69%	 cpu: 1048.46%	 leader network in: 123.73KB/s	 follower network in: 289.56KB/s	 network out: 252.69KB/s	 potential network out: 831.82KB/s	 leaders/replicas: 2215/6638}
+BROKER: {id: 6	 host: dfederico-cp73-broker-5	 disk: 55014.10MB/2.73%	 cpu: 1374.11%	 leader network in: 129.81KB/s	 follower network in: 253.23KB/s	 network out: 259.62KB/s	 potential network out: 782.95KB/s	 leaders/replicas: 2208/6641}
+BROKER: {id: 7	 host: dfederico-cp73-broker-6	 disk: 52152.70MB/2.59%	 cpu: 100.00%	 leader network in: 121.36KB/s	 follower network in: 254.62KB/s	 network out: 242.72KB/s	 potential network out: 766.54KB/s	 leaders/replicas: 1908/5640}
+BROKER: {id: 8	 host: dfederico-cp73-broker-7	 disk: 54874.18MB/2.72%	 cpu: 706.90%	 leader network in: 22.69KB/s	 follower network in: 351.10KB/s	 network out: 65.92KB/s	 potential network out: 768.12KB/s	 leaders/replicas: 1902/5642}
+BROKER: {id: 9	 host: dfederico-cp73-broker-8	 disk: 52607.42MB/2.61%	 cpu: 120.92%	 leader network in: 220.81KB/s	 follower network in: 142.06KB/s	 network out: 441.62KB/s	 potential network out: 743.62KB/s	 leaders/replicas: 1876/5632}
+BROKER: {id: 10	 host: dfederico-cp73-broker-9	 disk: 51705.45MB/2.57%	 cpu: 390.08%	 leader network in: 5.97KB/s	 follower network in: 401.18KB/s	 network out: 15.31KB/s	 potential network out: 817.68KB/s	 leaders/replicas: 1878/5631}
+BROKER: {id: 11	 host: dfederico-cp73-broker-10	 disk: 54387.79MB/2.70%	 cpu: 627.72%	 leader network in: 119.15KB/s	 follower network in: 229.93KB/s	 network out: 238.30KB/s	 potential network out: 698.16KB/s	 leaders/replicas: 2042/6152}
+BROKER: {id: 12	 host: dfederico-cp73-broker-11	 disk: 54812.59MB/2.72%	 cpu: 1163.17%	 leader network in: 262.69KB/s	 follower network in: 119.15KB/s	 network out: 525.38KB/s	 potential network out: 763.68KB/s	 leaders/replicas: 1874/5628}
+

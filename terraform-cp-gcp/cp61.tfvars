@@ -10,7 +10,7 @@ zone = "europe-west1-c"
 external_source_ranges = ["90.75.217.0/24"]
 
 zk_vm_count = 1
-br_vm_count = 6
+br_vm_count = 12
 sr_vm_count = 0
 connect_vm_count = 0
 ksql_vm_count = 0
